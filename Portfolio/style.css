@@ -1,0 +1,184 @@
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1d1d;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    background-color: #292828;
+    border-bottom: 1px solid #444;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* Home Section */
+.home {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.home h1 {
+    font-size: 40px;
+}
+
+.home span {
+    color: #60a5fa;
+}
+
+.home p {
+    margin: 15px 0;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Common Sections */
+.section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #60a5fa;
+    margin-bottom: 25px;
+}
+
+/* Skills - Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Projects - Flexbox */
+.projects-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #292828;
+    border: 1px solid #444;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1 1 200px;
+}
+
+.card h3 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact p {
+    margin: 10px;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #292828;
+    color: #aaa;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 70px 15px;
+    }
+
+    .home h1 {
+        font-size: 27px;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+}
