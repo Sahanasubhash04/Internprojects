@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(0,48,68);
+}
+#mainbox{
+    overflow: hidden;
+    margin-top: 70px;
+    margin-left:300px;
+    width:900px;
+    height:600px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+}
+#headingtxt{
+    color: white;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#addbtn{
+    color:white;
+    background-color: orange;
+    border-radius: 7px;
+    width:80px;
+    height:50px;
+    margin-left: 2px;
+    font-size: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#inputtxt{
+    width:800px;
+    height:50px;
+    margin-left:5px;
+    background-color: transparent;
+    border: 1px solid rgb(3, 77, 108);
+    outline: none;
+    transition: 0.3s ease;
+    font-size: 20px;
+
+}
+#inputtxt::placeholder{
+    color: #829ca8;
+}
+#inputtxt:focus{
+    background-color: rgb(3, 77, 108);
+    color:white;
+}
+.task {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.textitem {
+    color: white;
+    flex: 1;
+}
+ul li span{
+    font-size: 20px;
+    color:#555;
+    line-height: 40px;
+    /* text-align: center; */
+    height:40px;
+    width:40px;
+    border-radius: 50px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color:#555;
+}
+ul li{
+    width:800px;
+    font-size: 25px;
+    color:white;
+    /* border-bottom: 1px solid #555; */
+}
+
+#headingtxt {
+    position: relative;
+}
+
+#headingtxt::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 150px;
+    height: 3px;
+}
+#tasklist {
+    list-style: none;
+    padding: 0 5px;
+    margin-top: 15px;
+}
+
+#tasklist li {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 25px;
+    border-bottom: 1px solid #555;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: orange;
+    flex-shrink: 0;
+}
+
+.task-text {
+    flex: 1;
+    color: white;
+}
+
+.task-text.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: darkred;
+}
