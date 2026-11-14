@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sahana's personal portfolio">
+    <title>Sahana | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+
+                        slideUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(40px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        },
+
+                        slideRight: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(-40px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        },
+
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    },
+
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-in-out',
+                        'slide-up': 'slideUp 1s ease-out',
+                        'slide-right': 'slideRight 1s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-gray-950 text-white">
+    <header class="bg-gray-900 sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-6xl mx-auto px-5 py-5
+                    flex flex-col sm:flex-row
+                    justify-between items-center gap-4">
+            <h2 class="text-2xl font-bold text-blue-400
+                       hover:scale-105 transition duration-300">
+                Sahana S
+            </h2>
+            <ul class="flex flex-wrap justify-center gap-4 md:gap-7
+                       text-sm md:text-base">
+                <li>
+                    <a href="#home"class="hover:text-blue-400 transition duration-300">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about"class="hover:text-blue-400 transition duration-300">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills"class="hover:text-blue-400 transition duration-300">
+                        Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact"class="hover:text-blue-400 transition duration-300">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="min-h-[85vh] flex flex-col justify-center items-center text-center px-5 py-16">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 animate-slide-right"> Hello, I'm<span class="text-blue-400">Sahana</span> </h1>
+            <h2 class="text-xl md:text-2xl text-gray-300 mb-4 animate-fade-in"> Frontend Developer</h2>
+            <p class="text-gray-400 max-w-xl leading-7 animate-slide-up">I create attractive, responsive and user-friendly websites using modern web technologies.  </p>
+            <a href="#contact"class="mt-8 bg-blue-600 px-7 py-3 rounded-lg shadow-lg animate-float hover:bg-blue-800 hover:scale-110 transition duration-300"> Contact Me</a>
+        </section>
+        <section id="about" class="py-16 md:py-20 px-5 md:px-10bg-gray-900 text-center">
+            <h2 class="text-3xl font-bold text-blue-400 mb-8 animate-slide-up"> About Me </h2>
+            <p class="max-w-3xl mx-auto text-gray-300 leading-8 animate-fade-in">I am a BCA graduate and an aspiring Frontend Developer.I have a strong interest in web development and UI design.I enjoy creating attractive, responsive and user-friendlywebsites and learning new technologies.</p>
+        </section>
+        <section id="skills"class="py-16 md:py-20 px-5 md:px-10 max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-blue-400 text-center mb-12 animate-slide-up">My Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-gray-800 p-7 md:p-8 rounded-xl text-center animate-slide-up hover:bg-blue-900 hover:-translate-y-3 hover:shadow-xl transition duration-500">
+                    <h3 class="text-xl font-bold">HTML5</h3>
+                    <p class="text-gray-400 mt-3">Creating structured web pages.</p>
+                </div>
+                <div class="bg-gray-800 p-7 md:p-8 rounded-xl text-center animate-slide-up hover:bg-blue-900 hover:-translate-y-3 hover:shadow-xl transition duration-500">
+                    <h3 class="text-xl font-bold">CSS3</h3>
+                    <p class="text-gray-400 mt-3">Styling and responsive layouts. </p>
+                </div>
+                <div class="bg-gray-800 p-7 md:p-8 rounded-xl text-center animate-slide-up hover:bg-blue-900 hover:-translate-y-3 hover:shadow-xl transition duration-500">
+                    <h3 class="text-xl font-bold">JavaScript</h3>
+                    <p class="text-gray-400 mt-3">Adding functionality to websites.</p>
+                </div>
+                <div class="bg-gray-800 p-7 md:p-8 rounded-xl text-center animate-slide-up hover:bg-blue-900 hover:-translate-y-3 hover:shadow-xl transition duration-500">
+                    <h3 class="text-xl font-bold">ReactJS</h3>
+                    <p class="text-gray-400 mt-3"> Building reusable UI components.</p>
+                </div>
+                <div class="bg-gray-800 p-7 md:p-8 rounded-xl text-center animate-slide-up hover:bg-blue-900 hover:-translate-y-3 hover:shadow-xl transition duration-500">
+                    <h3 class="text-xl font-bold">Tailwind CSS</h3>
+                    <p class="text-gray-400 mt-3"> Creating modern user interfaces.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact"class="py-16 md:py-20 px-5 text-center">
+            <h2 class="text-3xl font-bold text-blue-400 mb-8 animate-slide-up">Contact Me</h2>
+            <p class="text-gray-300 mb-3">Email: sahanas@ivoyant.com</p>
+            <p class="text-gray-300 mb-3"> Location: Davangere, Karnataka</p>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-center px-5 py-6 text-gray-400">
+        <p>
+            &copy; 2026 Sahana S. All Rights Reserved.
+        </p>
+    </footer>
+</body>
+</html>
