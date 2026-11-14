@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS responsive</title>
+    <style>
+        /* GENERAL CSS */
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1e1d1d;
+            overflow-x: hidden;
+        }
+        nav {
+            background-color: #1e1d1d;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2d2b2b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }                                                               
+        nav h1 {
+            margin: 0;
+        }
+        nav p {
+            margin: 0.5rem 0 0 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        nav a:hover {
+            background-color: #272525;
+            text-decoration: underline;
+        }
+        main {
+            padding: 1rem;
+        }
+        section {
+            min-height: 100vh;
+            scroll-margin-top: 15px;
+        }
+        section a{
+            background-color: #272525;
+            transition: background-color 0.5s ease;
+        }
+        /* HOME SECTION */
+        #home {
+            display: block !important;
+            min-height: 100vh;
+        }
+        .info-card {
+            min-height: 150px;
+            width: 400px;
+            color: aliceblue;
+            background-color: #272525;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-top: 110px;
+            margin-right: 100px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            row-gap: 15px;
+            column-gap: 10px;
+            align-items: center;
+            width: 100%;
+        }
+        .info-grid p,
+        .info-grid b {
+            margin: 0;
+            margin-left: 20px;
+        }
+        .btn:hover {
+            background-color: #535455;
+        }
+        #skills {
+            min-height: 100vh;
+        }
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        .skill {
+            background-color: #272525;
+            color: aliceblue;
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .skill:hover {
+            background-color: #535455;
+        }
+        #projects {
+            margin-top: 100px;
+        }
+        .project-card {
+            width: 400px;
+            height: 300px;
+            background-color: #1e1d1d;
+            border: 1px solid white;
+            border-radius: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: aliceblue;
+        }
+        .project-image {
+            width: 300px;
+            height: 180px;
+            margin-top: 5px;
+            border-radius: 25px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #boxmodel {
+            min-height: 100vh;
+            margin-top: 100px;
+        }
+        .boxmodel-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .margin {
+            background-color: #66552c;
+            padding: 25px;
+            margin: 15px;
+            border-radius: 10px;
+            color: #b9c5ff;
+        }
+        .border {
+            background-color: #292f52;
+            border: 7px solid #8295ff;
+            padding: 25px;
+        }
+        .content {
+            background-color: #191d34;
+            border: 1px dashed #b9c5ff;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+        }
+        /*TABLET RESPONSIVE DESIGN */
+        @media screen and (max-width: 1024px) {
+
+            nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            #home > div {
+                align-items: center;
+                gap: 20px;
+            }
+            #home > div > div:first-child > div:first-child p {
+                font-size: 55px !important;
+            }
+            .info-card {
+                width: 350px;
+                margin: 30px 10px;
+            }
+            .skill-grid {
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+            }
+            #projects > div {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 15px;
+            }
+            .project-card {
+                width: 100% !important;
+                height: auto !important;
+                padding: 10px;
+            }
+            .project-image {
+                width: 100% !important;
+                max-width: 300px;
+            }
+            .boxmodel-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .margin {
+                max-width: 100%;
+            }
+        }
+        /*MOBILE RESPONSIVE DESIGN*/
+        @media screen and (max-width: 767px) {
+
+            section {
+                padding: 15px;
+            }
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            nav p {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            nav a {
+                margin-right: 5px;
+            }
+            #home > div {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            #home > div > div:first-child > div:first-child p {
+                font-size: 38px !important;
+                padding-left: 10px !important;
+            }
+            #home > div > div:first-child > div:nth-child(2) {
+                padding-left: 10px !important;
+                font-size: 14px !important;
+            }
+            #home > div > div:first-child > div:nth-child(2) br {
+                display: none;
+            }
+            .btn {
+                margin-left: 10px !important;
+            }
+            .info-card {
+                width: 100%;
+                height: auto;
+                margin: 30px 0;
+                padding: 15px 5px;
+                overflow-x: hidden;
+            }
+            .info-grid {
+                grid-template-columns: 100px 1fr;
+                font-size: 13px;
+            }
+            .info-grid p,
+            .info-grid b {
+                margin-left: 5px;
+            }
+            .skill-grid {
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                gap: 10px;
+            }
+            .skill {
+                padding: 15px 5px;
+                font-size: 13px;
+            }
+            #projects {
+                margin-top: 70px;
+            }
+            #projects > div {
+                grid-template-columns: 1fr !important;
+            }
+            .project-card {
+                width: 100% !important;
+                height: auto !important;
+                padding: 10px;
+                overflow-x: hidden;
+            }
+            .project-image {
+                width: 100% !important;
+                max-width: 300px;
+            }
+            .boxmodel-container {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 25px;
+            }
+            .boxmodel-container > div:first-child {
+                order: 1;
+            }
+            .boxmodel-container > .margin {
+                order: 2;
+                width: 100%;
+                margin: 0;
+            }
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <h1>Sahana S</h1>
+        <p>
+            <a href="#home">Home</a> 
+            <a href="#skills">Skills</a> 
+            <a href="#projects">Projects</a>
+            <a href="#boxmodel">Boxmodel</a>
+        </p>
+    </nav>
+    <main>
+        <section id="home" style="min-height: 100vh">
+            <div style="display: flex;justify-content:space-between;">
+                <div style="width:fit-content">
+                    <div style="color: aliceblue;">
+                    <p style="font-size:80px; padding-left: 40px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; line-height: 1;"><strong>I build<br> interface that fits<br> every screen.</strong></p>
+                    </div>
+                    <div style="color:aliceblue;font-size: medium;margin-bottom:50px;padding-left: 50px">I use CSS media queries to create responsive layouts <br>that adapt to different screen sizes — ensuring a consistent<br> and user-friendly experience across mobile phones, <br>tablets, and desktop screens.
+                    </div>
+                    <a class="btn"href="#projects" style="background-color: #272525; color: aliceblue; border-radius: 10px; padding: 10px 20px; border: none; cursor: pointer; margin-left: 50px; text-decoration: none;">View my work</a>
+                </div>
+                <div class="info-card">
+                    <div class="info-grid">
+                        <p>Project</p>
+                        <b>Responsive demo</b>
+                        <p>Layout</p>
+                        <b>Flex,grid</b>
+                        <p>Breakpoints</p>
+                        <b>Mobile,desktop,tablet</b>
+                        <p>Technology</p>
+                        <b>HTML5,CSS3</b>
+                    </div>
+                </div>
+           </div>
+        </section>
+        <section id="skills" style="min-height: 100vh; color: aliceblue; margin-top:100px">
+            <h1 style="font-size: 40px;color: aliceblue;"><strong>Skills</strong></h1>
+            <div class="skill-grid">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JAVASCRIPT</div>
+                <div class="skill">TAILWIND CSS</div>
+                <div class="skill">REACT JS</div>
+            </div>
+            <div id="projects" style="margin-top:100px">
+                <h1 style="font-size: 40px;color: aliceblue;"><strong>Projects</strong></h1>
+                <div style="display:grid; grid-template-columns: repeat(3, 1fr);gap:20px ;justify-content: space-around">
+                    <div style="width: 400px;height:300px;background-color: #1e1d1d;border: 1px solid white;border-radius: 25px;display:flex;flex-wrap: wrap;justify-content: center;"><div style="width:300px;height:180px;margin-top:5px;border-radius: 25px;border:1px solid white;display: flex;justify-content: center;align-items: center;">image</div><div><h2>Weather forecast</h2><div>paragraph on project</div></div>
+                   </div>
+                   <div style="width: 400px;height:300px;background-color: #1e1d1d;border: 1px solid white;border-radius: 25px;display:flex;flex-wrap: wrap;justify-content: center;"><div style="width:300px;height:180px;margin-top:5px;border-radius: 25px;border:1px solid white;display: flex;justify-content: center;align-items: center;">image</div><div><h2>Portfolio</h2><div>paragraph on project</div></div>
+                </div>
+                <div style="width: 400px;height:300px;background-color: #1e1d1d;border: 1px solid white;border-radius: 25px;display:flex;flex-wrap: wrap;justify-content: center;"><div style="width:300px;height:180px;margin-top:5px;border-radius: 25px;border:1px solid white;display: flex;justify-content: center;align-items: center;">image</div><div><h2>Todolist</h2><div>paragraph on project</div></div>
+            </div>
+                </div>
+            </div>
+        </section>
+        <section id="boxmodel" style="min-height: 100vh; color: aliceblue; margin-top:100px">
+            <h1 style="font-size: 40px;color: aliceblue;"><strong>Boxmodel</strong></h1>
+            <div class="boxmodel-container" style="display: flex;justify-content: space-around;">
+                <div>
+                    <div style="font-size: 50px;color: aliceblue;margin-left:50px">The box model,<br> visualised</div>
+                    <div style="font-size:20px;margin-left:50px"><p>Every element is a rectangle made of four layers.<br> Moving outward: content, padding, border, margin.<br> This page uses box-sizing: border-box <br>so a set width already includes padding and border.</p></div>
+                </div>
+                <div class="margin">
+                    <p>margin (outside space)</p>
+                    <div class="border">
+                        <p>border (blue edge) → padding (inside space)</p>
+                        <div class="content">
+                            content
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
