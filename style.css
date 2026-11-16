@@ -1,4 +1,4 @@
-/* Common responsive settings */
+
 * {
     box-sizing: border-box;
 }
@@ -6,13 +6,14 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 img {
     max-width: 100%;
 }
 body{
-    background-image: url(image.png);
+    background-color: #101827;
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
@@ -20,8 +21,8 @@ body{
     background-repeat: no-repeat;
     height:100vh;
     overflow-x: hidden;
-    overflow-y:auto;
-    backdrop-filter: blur(20px);
+    overflow-y:hidden;
+    backdrop-filter: blur(50px);
     font-family: comfortaa, sans-serif;
 }
 .mainbox{
@@ -53,7 +54,7 @@ body{
     text-align: left;
     margin-left:25px;
     margin-bottom: 0px;
-    color:white ;
+    color:#F8FAFC;
     font-size:15px;
     margin-top:10px;
 }
@@ -70,8 +71,9 @@ body{
     margin-top: 10px;
     margin-left:25px;
     margin-bottom: 0px;
-    color:white ;
-    font-size:25px;
+    color:#FF8066;
+    font-size:50px;
+    font-weight: bolder;
 }
 .line{
     margin-top:20px;
@@ -97,7 +99,7 @@ body{
 .rightbox{
     width:70vw;
     height:85vh;
-    /* background-color: aqua; */
+    /* background-color:#263B60; */
 
 }
 .searchbar{
@@ -105,23 +107,30 @@ body{
     position: relative;
     width:100vw;
     height: 10vh;
-    /* background: #000; */
+    margin-top:10px;
+    /* background: #E; */
     overflow-y: hidden;
    
 }
+.imgbox{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
 .img1div{
-    width:25px;
+    width:20vw;
+    gap:5px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     margin-left:10px;
 }
-.img1div h6{
+.img1div h5{
     margin-top: 15px;
     margin-left: 10px;
     color:white;
 }
-.img2div h6{
+.img2div h5{
     margin-top: 15px;
     margin-left: 10px;
     color:white;
@@ -134,9 +143,10 @@ img{
         margin-left: 10px;
 }
 .img2div{
-    width:25px;
+    width:20vw;
     display: flex;
     flex-direction: row;
+    gap:5px;
     margin-left:10px;
 }
 .btmtxt{
@@ -149,6 +159,7 @@ img{
 .inputbox{
     width:40vw;
     position:absolute;
+    background: #F1F5F9;
     left:480px;
     height: 5vh;
     top:10px;
@@ -156,10 +167,10 @@ img{
     border:none;
     /* padding-left:20px; */
     font-size: small;
+    color: #1E293B;
     outline:none;
     
 }
-
 .searchbar ::placeholder{
     color: #262121;
     padding-left:10px;
@@ -216,6 +227,9 @@ img{
     padding: 3px;
     justify-content: space-around;
     color: white;
+}
+.date{
+    width:max-content;
 }
 .imgdeg1{
     display: flex;
@@ -418,24 +432,25 @@ img{
 .hourly {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
     width: calc(100% - 60px);
-    margin-left: 30px;
+    margin-left: 10px;
 }
 .hour {
-    width: 85px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 8px;
+    /* padding: 8px; */
+    padding-left:20px;
     background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     border-radius: 12px;
-    color: white;
+    color: #A9C9F5;
     margin-right: 0;
     flex-shrink: 0;
 }
