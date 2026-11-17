@@ -1,4 +1,3 @@
-
 const API_KEY = "a6a8e727a64c39f118057a37e0696fef";
 
 const input = document.querySelector(".inputbox");
@@ -304,7 +303,6 @@ function updateAirQuality(data) {
 searchIcon.addEventListener("click", () => {
 
     getWeather(input.value.trim());
-
 });
 
 
